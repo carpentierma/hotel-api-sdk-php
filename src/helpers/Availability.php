@@ -10,6 +10,7 @@ namespace hotelbeds\hotel_api_sdk\helpers;
 use hotelbeds\hotel_api_sdk\model\Destination;
 use hotelbeds\hotel_api_sdk\model\Geolocation;
 use hotelbeds\hotel_api_sdk\model\Stay;
+use hotelbeds\hotel_api_sdk\model\KeywordsFilter;
 
 /**
  * Class Availability
@@ -18,7 +19,7 @@ use hotelbeds\hotel_api_sdk\model\Stay;
  * @property array $occupancies In the occupancy node the following must be informed: the number of rooms, capacity, number of adults, number of children and children ages if applicable.
  * @property Destination $destination Destination element: Destination code, zone
  * @property Geolocation $geolocation Geolocation element: longitude, latitude
- * @property array $keywords Array of keywords to be searched.
+ * @property KeywordsFilter $keywords Array of keywords to be searched.
  * @property array $hotels Array of code of hotels to be filtered.
  * @property string $sourceMarket Hotelbeds Group client source market
  * @property boolean $dailyRate Display the rate day by day
@@ -38,7 +39,7 @@ class Availability extends ApiHelper
                 "occupancies" => "array",
                 "geolocation" => "hotelbeds\\hotel_api_sdk\\model\\Geolocation",
                 "destination" => "hotelbeds\\hotel_api_sdk\\model\\Destination",
-                "keywords" => "array",
+                "keywords" => "hotelbeds\\hotel_api_sdk\\model\\KeywordsFilter",
                 "hotels" => "array",
                 "board" => "string",
                 "sourceMarket" => "string",
